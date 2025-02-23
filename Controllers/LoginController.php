@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['role'] = $user['role'];
 
         // Redirecionando para a página inicial após o login
-        header("Location: ../pages/dashboard/index.php");
+        header("Location: ../pages/dashboard");
         exit();
     } else {
         // Exibindo um alerta via JavaScript
-        echo "<script>alert('Usuário ou senha inválidos!'); window.location.href = '../pages/login/index.php';</script>";
+        echo "<script>alert('Usuário ou senha inválidos!'); window.location.href = '../pages/login';</script>";
     }
 }

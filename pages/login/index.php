@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-// Verifica se já existe uma sessão ativa
 if (isset($_SESSION['user_id'])) {
-    // Se já estiver logado, redireciona para o dashboard
     header("Location: /petshop/pages/dashboard/");
     exit();
 }

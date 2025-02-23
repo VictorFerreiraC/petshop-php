@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login/index.php"); // Redireciona para o login se não estiver logado
+    header("Location: ../login/index.php");
     exit();
 }
 
@@ -11,8 +10,28 @@ include('../../includes/header.php');
 ?>
 <link rel="stylesheet" href="./styles.css">
 
-<h1> Lista de Produtos</h1>
-
 <a href="../dashboard/">Dashboard</a>
+
+<main>
+    <h1> Lista de Produtos</h1>
+
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Validade</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</main>
+
+<script src="./script.js"></script>
 
 <?php include('../../includes/footer.php'); ?>
