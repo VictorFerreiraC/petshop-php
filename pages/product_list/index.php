@@ -11,8 +11,8 @@ include('../../includes/header.php');
 ?>
 <link rel="stylesheet" href="./styles.css">
 
-<h1>Bem-vindo <?php echo $_SESSION['name']; ?>!</h1>
+<h1> Lista de Produtos</h1>
 
-<a href="../product_list/">Lista de produtos</a>
+<a href="../dashboard/">Dashboard</a>
 
 <?php include('../../includes/footer.php'); ?>
