@@ -26,17 +26,17 @@ function loadProducts() {
             data.forEach(product => {
                 const row = document.createElement('tr');
 
-                const preco = `R$ ${parseFloat(product.price).toFixed(2).replace('.', ',')}`;
-                const validade = product.expiration_date ? formatDate(product.expiration_date) : 'N/A';
+                const price = `R$ ${parseFloat(product.price).toFixed(2).replace('.', ',')}`;
+                const expiration_date = product.expiration_date ? formatDate(product.expiration_date) : 'N/A';
 
                 row.innerHTML = `
-                    <td>${product.id}</td>
-                    <td>${product.name}</td>
-                    <td>${product.description}</td>
-                    <td>${preco}</td>
-                    <td>${product.quantity}</td>
-                    <td>${validade}</td>
-                    <td>${product.category_name}</td>
+                    <td class="product-id" >${product.id}</td>
+                    <td class="product-name" >${product.name}</td>
+                    <td class="product-description" >${product.description}</td>
+                    <td class="product-price" >${price}</td>
+                    <td class="product-quantity" >${product.quantity}</td>
+                    <td class="product-expiration" >${expiration_date}</td>
+                    <td class="product-category" >${product.category_name}</td>
                     <td>
                         <div class="product-actions">
                             <button class="add-product" onclick="editProduct(${product.id})" title="Editar Produto">

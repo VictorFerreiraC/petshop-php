@@ -18,13 +18,13 @@ include('../../includes/header.php');
     <table id="product-table">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Validade</th>
-                <th>Categoria</th>
+                <th class="product-id">ID</th>
+                <th class="product-name">Nome</th>
+                <th class="product-description">Descrição</th>
+                <th class="product-price">Preço</th>
+                <th class="product-quantity">Quantidade</th>
+                <th class="product-expiration">Validade</th>
+                <th class="product-category">Categoria</th>
                 <th>Ações</th>
             </tr>
         </thead>

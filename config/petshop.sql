@@ -78,7 +78,7 @@ INSERT INTO
   )
 VALUES
   (
-    8,
+    1,
     'Ração Premium para Cães Adultos',
     'Ração balanceada para cães adultos, com proteínas de alta qualidade e vitaminas essenciais para a saúde.',
     150.00,
@@ -89,7 +89,7 @@ VALUES
     '2025-02-23 19:49:03'
   ),
   (
-    9,
+    2,
     'Varinha com Penas para Gatos',
     'Varinha interativa com penas coloridas, excelente para estimular o gato a brincar.',
     35.00,
@@ -100,7 +100,7 @@ VALUES
     '2025-02-23 19:49:03'
   ),
   (
-    10,
+    3,
     'Coleira de Couro para Cães Pequenos',
     'Coleira ajustável de couro, confortável para cães pequenos.',
     50.00,
@@ -111,7 +111,7 @@ VALUES
     '2025-02-23 19:49:03'
   ),
   (
-    11,
+    4,
     'Xampu Antialérgico para Cães',
     'Xampu hipoalergênico para cães com pelagem sensível.',
     40.00,
@@ -122,7 +122,7 @@ VALUES
     '2025-02-23 19:49:03'
   ),
   (
-    12,
+    5,
     'Vitaminas para Cães',
     'Suplemento vitamínico para cães com pelo fraco e baixa energia.',
     90.00,
@@ -200,5 +200,3 @@ ALTER TABLE
   `products`
 ADD
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
-
-COMMIT;

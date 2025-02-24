@@ -61,3 +61,7 @@ tr:hover {
     background-color: #77200a;
     transition: background-color 0.3s;
 }
+
+.product-description{
+    width: 250px;
+}
