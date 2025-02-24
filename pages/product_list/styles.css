@@ -1,10 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -30,4 +23,41 @@ th {
 
 tr:hover {
     background-color: #f9f9f9;
+}
+
+.product-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.product-actions button {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.add-product {
+    background-color: #007bff;
+}
+
+.remove-product {
+    background-color: #d43912;
+}
+
+.product-actions button i {
+    color: white;
+    transition: color 0.3s;
+}
+
+.add-product:hover {
+    background-color: #073566;
+    transition: background-color 0.3s;
+}
+
+.remove-product:hover {
+    background-color: #77200a;
+    transition: background-color 0.3s;
 }

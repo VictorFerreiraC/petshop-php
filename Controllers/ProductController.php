@@ -16,5 +16,4 @@ $sql = $pdo->prepare($sql);
 $sql->execute();
 $products = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-// Retornar os produtos em formato JSON
 echo json_encode($products);

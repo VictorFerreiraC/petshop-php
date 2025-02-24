@@ -25,6 +25,7 @@ include('../../includes/header.php');
                 <th>Quantidade</th>
                 <th>Validade</th>
                 <th>Categoria</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody></tbody>
