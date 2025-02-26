@@ -1,70 +1,9 @@
-function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+function editProduct(id) {
+    alert(`Editar produto ID: ${id}`);
 }
 
-function loadProducts() {
-    fetch('../../Controllers/ProductController.php')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro na requisição');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.error) {
-                alert(data.error);
-                return;
-            }
-
-            const productTable = document.getElementById('product-table').getElementsByTagName('tbody')[0];
-            productTable.innerHTML = '';
-
-            data.forEach(product => {
-                const row = document.createElement('tr');
-
-                const price = `R$ ${parseFloat(product.price).toFixed(2).replace('.', ',')}`;
-                const expiration_date = product.expiration_date ? formatDate(product.expiration_date) : 'N/A';
-
-                row.innerHTML = `
-                    <td class="product-id" >${product.id}</td>
-                    <td class="product-name" >${product.name}</td>
-                    <td class="product-description" >${product.description}</td>
-                    <td class="product-price" >${price}</td>
-                    <td class="product-quantity" >${product.quantity}</td>
-                    <td class="product-expiration" >${expiration_date}</td>
-                    <td class="product-category" >${product.category_name}</td>
-                    <td>
-                        <div class="product-actions">
-                            <button class="add-product" onclick="editProduct(${product.id})" title="Editar Produto">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                            <button class="remove-product" onclick="deleteProduct(${product.id})" title="Excluir Produto">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </div>
-                    </td>
-                `;
-
-                productTable.appendChild(row);
-            });
-        })
-        .catch(error => {
-            console.error('Erro ao carregar os produtos:', error);
-        });
-}
-
-document.addEventListener('DOMContentLoaded', loadProducts);
-
-function editProduct(productId) {
-    alert(`Editar produto ID: ${productId}`);
-}
-
-function deleteProduct(productId) {
+function deleteProduct(id) {
     if (confirm('Tem certeza que deseja excluir este produto?')) {
-        alert(`Excluir produto ID: ${productId}`);
+        alert(`Excluir produto ID: ${id}`);
     }
 }

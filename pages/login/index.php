@@ -19,7 +19,6 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-
     <div class="div-form">
         <form action="../../controllers/LoginController.php" method="POST">
             <h1>Login</h1>
@@ -28,7 +27,6 @@ if (isset($_SESSION['user_id'])) {
             <button type="submit">Entrar</button>
         </form>
     </div>
-
 </body>
 
 </html>

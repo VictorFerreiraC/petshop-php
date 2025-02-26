@@ -3,12 +3,19 @@ h1 {
     margin-top: 20px;
 }
 
-table {
-    width: 80%;
+.table-container {
+    width: 90%;
     margin: 20px auto;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
@@ -39,7 +46,7 @@ tr:hover {
     padding: 5px;
 }
 
-.add-product {
+.edit-product {
     background-color: #007bff;
 }
 
@@ -52,7 +59,7 @@ tr:hover {
     transition: color 0.3s;
 }
 
-.add-product:hover {
+.edit-product:hover {
     background-color: #073566;
     transition: background-color 0.3s;
 }
